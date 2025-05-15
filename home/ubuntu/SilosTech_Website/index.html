@@ -4,153 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SilosTech - Inovação e Segurança para sua Colheita</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS EMBUTIDO */
+        body, h1, h2, h3, p, ul, li, a {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: #f4f4f4;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* CABEÇALHO COM IMAGEM */
+        .header-container {
+            position: relative;
+        }
+        .header-banner {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+        .header-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        header {
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 20px;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #FFA500;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        
+        /* CONTEÚDO PRINCIPAL */
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        section {
+            background: #fff;
+            padding: 40px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        
+        /* PRODUTOS */
+        .produtos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .produto-item {
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+        .produto-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        
+        /* BOTÕES */
+        .cta-button {
+            background: #FFA500;
+            color: #333;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+        }
+        
+        /* RESPONSIVIDADE */
+        @media (max-width: 768px) {
+            .header-banner {
+                height: 300px;
+            }
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                SilosTech
-            </div>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#diferenciais">Diferenciais</a></li>
-                <li><a href="#ambiental">Compromisso Ambiental</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#representantes">Representantes</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="header-container">
+        <!-- IMAGEM DO TOPO ADICIONADA AQUI -->
+        <div class="header-banner">
+            <img src="imagens/hero_banner.jpeg" alt="SilosTech - Tecnologia Agrícola">
+        </div>
+        
+        <header>
+            <nav>
+                <div class="logo">SilosTech</div>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#diferenciais">Diferenciais</a></li>
+                    <li><a href="#ambiental">Compromisso Ambiental</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#representantes">Representantes</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
 
     <main>
-        <section id="hero" class="hero-section">
-            <div class="hero-content">
-                <h1>SilosTech: Inovação e Segurança para sua Colheita</h1>
-                <p>Líder no mercado de construção e comercialização de silos para grãos.</p>
-                <a href="#produtos" class="cta-button">Conheça Nossas Soluções</a>
-            </div>
+        <section id="hero">
+            <h1>SilosTech: Inovação e Segurança para sua Colheita</h1>
+            <p>Soluções integradas para armazenagem de grãos</p>
+            <a href="#produtos" class="cta-button">Conheça Nossos Produtos</a>
         </section>
 
         <section id="sobre">
-            <h2>Sobre a SilosTech</h2>
-            <p>A SilosTech é uma empresa fictícia líder no mercado de construção e comercialização de silos para grãos. Com foco em inovação, qualidade e sustentabilidade, a empresa busca expandir sua presença digital através de um novo site institucional moderno e informativo. Este site será a principal vitrine da empresa na internet, apresentando seus produtos, diferenciais e compromisso com o cliente e o meio ambiente.</p>
-            <p>Nossa missão é fornecer soluções de armazenagem de grãos que superem as expectativas dos nossos clientes, combinando tecnologia de ponta, materiais de alta durabilidade e um serviço de excelência. Visamos ser referência em inovação e sustentabilidade no setor de agronegócio, contribuindo para a segurança alimentar e o desenvolvimento do campo.</p>
-            <!-- Imagem relacionada à fábrica ou à empresa pode ser adicionada aqui -->
-            <img src="imagens/construcao_fabrica.jpeg" alt="Fábrica da SilosTech" class="section-image">
+            <h2>Sobre Nós</h2>
+            <p>Líderes no mercado de silos agrícolas com tecnologia de ponta e compromisso com a qualidade.</p>
         </section>
 
         <section id="produtos">
             <h2>Nossos Produtos</h2>
             <div class="produtos-grid">
-                <article class="produto-item">
-                    <img src="imagens/hero_banner.jpeg" alt="Silo Metálico">
+                <div class="produto-item">
                     <h3>Silos Metálicos</h3>
-                    <p>Silos metálicos de alta resistência, ideais para armazenagem segura e eficiente de diversos tipos de grãos. Tecnologia avançada para conservação da qualidade do produto.</p>
-                </article>
-                <article class="produto-item">
-                    <img src="imagens/graos_agricultura.jpeg" alt="Silo de Concreto">
+                    <p>Silos metálicos de alta resistência, ideais para armazenagem segura e eficiente de diversos tipos de grãos. Tecnologia avançada para conservação da qualidade do produto</p>
+                    <img src="imagens/hero_banner.jpeg" alt="Silos Metálicos">
+                </div>
+                <div class="produto-item">
                     <h3>Silos de Concreto</h3>
                     <p>Silos de concreto robustos e duráveis, projetados para grandes capacidades de armazenagem. Soluções personalizadas para atender às necessidades específicas de cada cliente.</p>
-                </article>
-                <article class="produto-item">
-                    <!-- Poderia usar uma imagem genérica de silo ou agricultura se não houver específica -->
-                    <img src="imagens/Firefox_Screenshot_2025-05-14T22-32-25.881Z.png" alt="Silos Elevados" style="object-fit: cover; height: 200px;"> <!-- Imagem da screenshot como placeholder -->
+                    <img src="imagens/construcao_fabrica.jpeg" alt="Silos de Concreto">
+                </div>
+                <div class="produto-item">
                     <h3>Silos Elevados</h3>
-                    <p>Silos elevados que facilitam o carregamento e descarregamento de grãos, otimizando a logística e o fluxo de trabalho na propriedade. Estruturas seguras e eficientes.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="diferenciais">
-            <h2>Diferenciais SilosTech</h2>
-            <ul>
-                <li><strong>Tecnologia de Ponta:</strong> Utilizamos as mais recentes inovações em design e materiais.</li>
-                <li><strong>Durabilidade Garantida:</strong> Nossos silos são construídos para resistir às condições mais adversas.</li>
-                <li><strong>Assistência Técnica Especializada:</strong> Suporte completo desde o projeto até a manutenção.</li>
-                <li><strong>Sustentabilidade:</strong> Processos e materiais que respeitam o meio ambiente.</li>
-                <li><strong>Soluções Personalizadas:</strong> Projetos adaptados às necessidades de cada cliente.</li>
-            </ul>
-        </section>
-
-        <section id="ambiental">
-            <h2>Compromisso Ambiental</h2>
-            <p>Na SilosTech, a sustentabilidade é um pilar fundamental. Nossos processos de construção e os materiais utilizados são escolhidos com o objetivo de minimizar o impacto ambiental. Buscamos constantemente soluções inovadoras que promovam a eficiência energética e a conservação dos recursos naturais, reafirmando nosso compromisso com um futuro mais verde para o agronegócio.</p>
-            <img src="imagens/visao_ambiental.jpeg" alt="Compromisso Ambiental SilosTech" class="section-image">
-        </section>
-
-        <section id="depoimentos">
-            <h2>Depoimentos de Clientes</h2>
-            <div class="depoimentos-grid">
-                <article class="depoimento-item">
-                    <img src="imagens/depoimentos_clientes.jpeg" alt="Cliente Satisfeito 1" class="profile-pic">
-                    <p>"Excelente qualidade e atendimento! Os silos da SilosTech superaram minhas expectativas em durabilidade e eficiência. Recomendo!"</p>
-                    <h4>João Silva, Agricultor</h4>
-                </article>
-                <article class="depoimento-item">
-                    <!-- Usar outra imagem de pessoa ou genérica -->
-                    <img src="imagens/representante_comercial.jpeg" alt="Cliente Satisfeito 2" class="profile-pic">
-                    <p>"O suporte técnico da SilosTech foi fundamental para o sucesso da instalação. Profissionais competentes e atenciosos."</p>
-                    <h4>Maria Oliveira, Gerente de Cooperativa</h4>
-                </article>
-            </div>
-        </section>
-
-        <section id="representantes">
-            <h2>Contatos dos Representantes</h2>
-            <div class="representantes-grid">
-                <article class="representante-item">
-                    <h3>Região Sul</h3>
-                    <p>Carlos Alberto</p>
-                    <p>Telefone: (XX) XXXXX-XXXX</p>
-                    <p>Email: carlos.sul@silostech.com.br</p>
-                </article>
-                <article class="representante-item">
-                    <h3>Região Sudeste</h3>
-                    <p>Ana Beatriz</p>
-                    <p>Telefone: (YY) YYYYY-YYYY</p>
-                    <p>Email: ana.sudeste@silostech.com.br</p>
-                </article>
-                <article class="representante-item">
-                    <h3>Região Centro-Oeste</h3>
-                    <p>Paulo Ricardo</p>
-                    <p>Telefone: (ZZ) ZZZZZ-ZZZZ</p>
-                    <p>Email: paulo.co@silostech.com.br</p>
-                </article>
+                    <p>Silos elevados que facilitam o carregamento e descarregamento de grãos, otimizando a logística e o fluxo de trabalho na propriedade. Estruturas seguras e eficientes</p>
+                    <img src="imagens/graos_agricultura.jpeg" alt="Silos Elevados">
+                </div>
             </div>
         </section>
 
         <section id="contato">
-            <h2>Entre em Contato e Localização</h2>
-            <div class="contato-flex">
-                <div class="form-contato">
-                    <form action="#" method="post">
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" required>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                        <label for="mensagem">Mensagem:</label>
-                        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-                        <button type="submit" class="cta-button">Enviar Mensagem</button>
-                    </form>
-                </div>
-                <div class="localizacao">
-                    <h3>Nossa Sede</h3>
-                    <p>Rua das Inovações, 123</p>
-                    <p>Distrito Industrial, Agrocity - AG</p>
-                    <p>CEP: 12345-678</p>
-                    <p>Telefone: (00) 1234-5678</p>
-                    <!-- Imagem estática do mapa -->
-                    <img src="imagens/Firefox_Screenshot_2025-05-14T22-32-25.881Z.png" alt="Localização da SilosTech" style="width:100%; height:auto; max-width:400px; margin-top:10px; border:1px solid #ccc; object-fit: contain; object-position: bottom;" title="Placeholder de mapa, imagem da página de referência usada aqui">
-                </div>
-            </div>
+            <h2>Contato</h2>
+            <form style="display: grid; gap: 15px; max-width: 500px;">
+                <input type="text" placeholder="Nome" style="padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                <input type="email" placeholder="Email" style="padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                <textarea rows="4" placeholder="Mensagem" style="padding: 10px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+                <button type="submit" class="cta-button">Enviar Mensagem</button>
+            </form>
         </section>
     </main>
 
-    <footer>
+    <footer style="text-align: center; padding: 20px; background: #333; color: #fff;">
         <p>&copy; 2025 SilosTech. Todos os direitos reservados.</p>
     </footer>
-
 </body>
 </html>
